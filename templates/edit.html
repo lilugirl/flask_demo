@@ -9,12 +9,15 @@
 <hr>
 <h2>Edit:</h2>
 <form action="/posts/edit/{{post.id}}" method='POST'>
-   Title: <input type="text" name="title" id="title" value="{{post.title}}">
-   <br>
-   Author: <input type="text" name="author" id="author" value="{{post.author}}">
-   <br>
-   Content: <textarea name="content" id="content" cols="30" rows="10" >{{post.content}}</textarea>
-   <br>
-   <input type="submit" value="Save">
+    <label for="title" class="form-label">Title: </label>
+    <input type='text' name='title' id='title' class="form-control" placeholder="Enter Title" value="{{post.title}}">
+    <br>
+    <label for="author" class="form-label">Author: </label>
+    <input type='text' name='author' id='author' class="form-control" placeholder="Enter Author" value="{{post.author}}">
+    <br>
+    <label for="content" class="form-label">Post: </label>
+    <textarea name='content' id='content' rows="3" class="form-control" placeholder="Enter Content">{{post.content}}</textarea>
+    <br/>
+   <input type="submit" value="Save" class="btn btn-primary">
 </form>
 {% endblock%}
